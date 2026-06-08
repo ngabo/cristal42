@@ -1,4 +1,4 @@
-param([int]$Port = 3000, [string]$Root = "site")
+param([int]$Port = 3000, [string]$Root = "docs")
 
 $root = Resolve-Path $Root
 $listener = [System.Net.HttpListener]::new()
