@@ -13,37 +13,43 @@ document.addEventListener('DOMContentLoaded', () => {
   const submit  = form ? form.querySelector('.res-form__submit') : null;
   if (!form) return;
 
+  // Always hide success on load
+  success.hidden = true;
+
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
     if (!form.checkValidity()) { form.reportValidity(); return; }
 
     // Loading state
-    submit.disabled = true;
-    submit.textContent = 'Envoi en cours…';
+    const origText   = submit.innerHTML;
+    submit.disabled  = true;
+    submit.innerHTML = 'Envoi en cours…';
 
     const data = new FormData(form);
 
     try {
-      const res = await fetch('https://formsubmit.co/ajax/ngabochampion@gmail.com', {
-        method: 'POST',
-        headers: { 'Accept': 'application/json' },
-        body: data
+      const res  = await fetch('https://api.web3forms.com/submit', {
+        method : 'POST',
+        body   : data
       });
+      const json = await res.json();
 
-      if (res.ok) {
-        // Success
-        form.querySelectorAll('input, select, textarea').forEach(el => el.value = '');
+      if (json.success) {
+        // Show success message, clear fields
         success.hidden = false;
         success.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-        submit.textContent = '✓ Envoyé !';
+        form.querySelectorAll('input:not([type=hidden]), select, textarea')
+            .forEach(el => el.value = '');
+        submit.innerHTML = '✓ Envoyé !';
         submit.style.background = '#16a34a';
       } else {
-        throw new Error('Erreur serveur');
+        throw new Error(json.message || 'Erreur inconnue');
       }
-    } catch {
-      submit.disabled = false;
-      submit.textContent = 'Envoyer ma demande →';
-      alert('Une erreur est survenue. Veuillez réessayer ou nous appeler directement au 07 53 38 71 68.');
+    } catch (err) {
+      console.error('Erreur envoi :', err);
+      submit.disabled  = false;
+      submit.innerHTML = origText;
+      alert('Une erreur est survenue. Veuillez réessayer ou nous appeler au 07 53 38 71 68.');
     }
   });
 
