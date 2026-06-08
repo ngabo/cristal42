@@ -1,0 +1,151 @@
+/* ===== SERVICES PAGE v2 ===== */
+
+/* --- Page Hero --- */
+.page-hero {
+  position: relative;
+  padding: calc(68px + 5rem) 0 5rem;
+  overflow: hidden;
+  text-align: center;
+}
+.page-hero__bg {
+  position: absolute; inset: 0;
+  background: url('https://images.unsplash.com/photo-1527515637462-cff94aca208b?w=1600&q=80') center/cover no-repeat;
+}
+.page-hero__bg::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(13,61,80,.85) 0%, rgba(26,95,122,.72) 100%);
+}
+.page-hero__inner {
+  position: relative; z-index: 1;
+  margin-bottom: 0;
+}
+.page-hero__inner .chip {
+  margin: 0 auto 1.25rem;
+  background: rgba(201,168,76,.2);
+  border: 1px solid rgba(201,168,76,.4);
+  color: #f0d080;
+}
+.page-hero__title {
+  margin: 0 auto 1rem;
+  max-width: 640px;
+  color: var(--white);
+}
+.page-hero__desc {
+  color: rgba(255,255,255,.82);
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+/* --- Service Blocks --- */
+.svc-block { background: var(--white); }
+.svc-block--dark { background: var(--primary); }
+.svc-block--tinted { background: var(--surface-low); }
+
+.svc-block__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+.svc-block__image {
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  height: 420px;
+}
+.svc-block__image img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+.svc-block__image:hover img { transform: scale(1.04); }
+
+.svc-block__meta {
+  display: flex; align-items: center; gap: 1rem;
+  margin-bottom: 1rem;
+}
+.svc-block__meta span { font-size: 2rem; }
+.svc-block__desc {
+  color: var(--on-surface-variant);
+  margin-bottom: 1.75rem;
+}
+.svc-block--dark .svc-block__desc { color: rgba(255,255,255,.8); }
+
+.svc-list {
+  display: flex; flex-direction: column; gap: 10px;
+  margin-bottom: 2rem;
+}
+.svc-list li {
+  display: flex; align-items: center; gap: 10px;
+  font-size: 0.9rem;
+  color: var(--on-surface-variant);
+}
+.svc-list--light li { color: rgba(255,255,255,.82); }
+
+/* --- Detailing grid --- */
+.svc-detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* --- Chantier --- */
+.svc-chantier { background: var(--primary-dark); color: var(--white); }
+.svc-chantier__inner {
+  max-width: 800px; margin: 0 auto; text-align: center;
+}
+.svc-chantier__header {
+  display: flex; align-items: center; justify-content: center;
+  gap: 1rem; margin-bottom: 1rem;
+}
+.svc-chantier__header span { font-size: 2.5rem; }
+.svc-chantier__desc { color: rgba(255,255,255,.8); margin-bottom: 2.5rem; }
+.svc-chantier__cols {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 3rem; text-align: left; margin-bottom: 2.5rem;
+}
+.svc-chantier__cols .svc-list li { color: rgba(255,255,255,.78); }
+
+/* --- Promise Strip --- */
+.promise-strip { background: var(--surface-low); }
+.promise-strip__title { text-align: center; margin-bottom: 3rem; }
+.promise-strip__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  text-align: center;
+}
+.promise-strip__item {
+  padding: 2.25rem 1.5rem;
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.promise-strip__item:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+.promise-strip__icon {
+  width: 60px; height: 60px;
+  background: var(--primary-pale);
+  border-radius: var(--radius-lg);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.75rem; margin: 0 auto 1rem;
+}
+.promise-strip__item h3 { margin-bottom: 0.5rem; }
+.promise-strip__item p { font-size: 0.875rem; color: var(--on-surface-variant); }
+
+/* --- Responsive --- */
+@media (max-width: 900px) {
+  .svc-block__inner { grid-template-columns: 1fr; gap: 2.5rem; }
+  .svc-block__image { height: 280px; }
+  .svc-block--dark .svc-block__image,
+  .svc-block--tinted .svc-block__image { order: -1; }
+  .svc-detail-grid { grid-template-columns: 1fr; gap: 1.25rem; }
+  .svc-chantier__cols { grid-template-columns: 1fr; gap: 1.5rem; }
+  .promise-strip__grid { grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+}
+@media (max-width: 600px) {
+  .promise-strip__grid { grid-template-columns: 1fr; }
+}

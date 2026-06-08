@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cristal42 — Nettoyage professionnel à Saint-Étienne</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/home.css" />
+</head>
+<body>
+
+  <!-- ===== NAV ===== -->
+  <nav class="nav" id="navbar">
+    <div class="container nav__inner">
+      <a href="index.html" class="nav__logo">
+        <div class="nav__logo-mark">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2l1.5 8.5L22 12l-8.5 1.5L12 22l-1.5-8.5L2 12l8.5-1.5z"/>
+          </svg>
+        </div>
+        <span class="nav__logo-name">Cristal<span style="color:var(--gold)">42</span></span>
+      </a>
+      <ul class="nav__links">
+        <li><a href="index.html" class="active">Accueil</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="index.html#pourquoi">Pourquoi nous</a></li>
+        <li><a href="index.html#methode">Notre méthode</a></li>
+        <li><a href="reservation.html">Contact</a></li>
+      </ul>
+      <div style="display:flex;align-items:center;gap:12px">
+        <span class="nav__phone">☎ 07 53 38 71 68</span>
+        <a href="reservation.html" class="btn btn-primary nav__cta">Devis gratuit</a>
+      </div>
+      <button class="nav__burger" id="burger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div class="mobile-nav" id="mobileNav">
+    <a href="index.html">Accueil</a>
+    <a href="services.html">Services</a>
+    <a href="index.html#pourquoi">Pourquoi nous</a>
+    <a href="index.html#methode">Notre méthode</a>
+    <a href="reservation.html">Contact</a>
+    <a href="reservation.html" class="btn btn-primary" style="text-align:center;border-radius:8px">Devis gratuit</a>
+  </div>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="hero__bg"></div>
+    <div class="container hero__inner">
+      <div class="hero__content">
+        <p class="chip hero__eyebrow">Nettoyage professionnel · Saint-Étienne</p>
+        <h1 class="display-lg hero__title">
+          Un éclat <em>cristallin,</em><br>pour chaque espace.
+        </h1>
+        <p class="body-lg hero__desc">
+          Cristal42 redonne vie à vos intérieurs avec des produits de qualité et une équipe passionnée. Résidentiel, commercial ou Airbnb — nous prenons soin de chaque détail.
+        </p>
+        <div class="hero__actions">
+          <a href="reservation.html" class="btn btn-primary">Obtenir un devis gratuit</a>
+          <a href="services.html" class="btn btn-outline" style="color:rgba(255,255,255,.9);border-color:rgba(255,255,255,.5)">Découvrir nos services</a>
+        </div>
+        <div class="hero__stats">
+          <div class="hero__stat"><strong>200+</strong><span>Clients satisfaits</span></div>
+          <div class="hero__stat"><strong>4.9/5</strong><span>Note moyenne</span></div>
+          <div class="hero__stat"><strong>7j/7</strong><span>Disponibilité</span></div>
+          <div class="hero__stat"><strong>100%</strong><span>Assurés</span></div>
+        </div>
+      </div>
+      <div class="hero__visual">
+        <img class="hero__img-main" src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=800&q=85" alt="Professionnel de nettoyage" />
+        <img class="hero__img-accent" src="https://images.unsplash.com/photo-1563453392212-326f5e854473?w=600&q=85" alt="Intérieur propre et lumineux" />
+        <div class="hero__badge">
+          <strong>200+</strong>
+          <span>Clients ravis</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TRUST BAR ===== -->
+  <div class="trust-bar">
+    <div class="container trust-bar__inner">
+      <div class="trust-item"><span class="trust-item__icon">🛡️</span> Assurés &amp; certifiés</div>
+      <div class="trust-item"><span class="trust-item__icon">🌿</span> Produits écologiques</div>
+      <div class="trust-item"><span class="trust-item__icon">⭐</span> Note 4.9 / 5</div>
+      <div class="trust-item"><span class="trust-item__icon">📅</span> Disponible 7j/7</div>
+      <div class="trust-item"><span class="trust-item__icon">✅</span> Satisfaction garantie</div>
+    </div>
+  </div>
+
+  <!-- ===== SERVICES TEASER ===== -->
+  <section class="section services-teaser" id="services">
+    <div class="container">
+      <div class="services-teaser__header reveal">
+        <div>
+          <p class="section-label">Ce que nous faisons</p>
+          <h2 class="headline-lg">Nos sphères<br>d'intervention</h2>
+        </div>
+        <a href="services.html" class="label-lg services-teaser__all">Voir tous les services →</a>
+      </div>
+
+      <div class="services-teaser__grid">
+
+        <!-- Résidentiel -->
+        <div class="service-card reveal">
+          <img class="service-card__img" src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=700&q=80" alt="Nettoyage résidentiel" loading="lazy" />
+          <div class="service-card__body">
+            <div class="service-card__icon">🏠</div>
+            <h3>Résidentiel Premium</h3>
+            <p>Un entretien méticuleux pour vos maisons et appartements, avec des produits respectueux de vos surfaces.</p>
+            <ul class="service-card__list">
+              <li><span class="sparkle sparkle--sm"></span> Nettoyage en profondeur</li>
+              <li><span class="sparkle sparkle--sm"></span> Désinfection écologique</li>
+              <li><span class="sparkle sparkle--sm"></span> Polissage des surfaces</li>
+            </ul>
+            <a href="services.html#residentiel" class="btn btn-outline" style="margin-top:auto">En savoir plus</a>
+          </div>
+        </div>
+
+        <!-- Espaces Commerciaux -->
+        <div class="service-card service-card--dark reveal reveal-delay-1">
+          <img class="service-card__img" src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=700&q=80" alt="Bureaux et espaces commerciaux" loading="lazy" />
+          <div class="service-card__body">
+            <div class="service-card__icon">🏢</div>
+            <h3>Espaces Commerciaux</h3>
+            <p>Bureaux, boutiques et showrooms — maintenez une image de marque forte grâce à un environnement impeccable.</p>
+            <a href="services.html#commercial" class="btn btn-white" style="margin-top:auto">Découvrir</a>
+          </div>
+        </div>
+
+        <!-- Gestion Airbnb -->
+        <div class="service-card reveal reveal-delay-2">
+          <img class="service-card__img" src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=700&q=80" alt="Préparation Airbnb" loading="lazy" />
+          <div class="service-card__body">
+            <div class="service-card__icon">✦</div>
+            <h3>Gestion Airbnb</h3>
+            <p>Optimisez vos évaluations avec notre service de nettoyage rapide et soigné entre chaque rotation.</p>
+            <a href="services.html#airbnb" class="btn btn-outline" style="margin-top:auto">Planifier</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHY US ===== -->
+  <section class="section why-us" id="pourquoi">
+    <div class="container why-us__inner">
+      <div class="why-us__images reveal">
+        <img class="why-us__img-main" src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=900&q=85" alt="Équipe Cristal 42 au travail" />
+        <img class="why-us__img-accent" src="https://images.unsplash.com/photo-1527515637462-cff94aca208b?w=600&q=80" alt="Résultat de nettoyage" loading="lazy" />
+        <div class="why-us__badge">
+          <strong>200+</strong>
+          <span>Clients satisfaits</span>
+        </div>
+      </div>
+      <div class="why-us__content reveal reveal-delay-1">
+        <p class="section-label">Pourquoi nous choisir</p>
+        <h2 class="headline-lg">La propreté comme<br>engagement permanent</h2>
+        <p class="body-lg">Chez Cristal42, nous ne nettoyons pas seulement — nous transformons vos espaces en lieux où il fait bon vivre et travailler.</p>
+        <div class="why-features">
+          <div class="why-feature">
+            <div class="why-feature__icon">🛡️</div>
+            <div>
+              <h4>Assurés &amp; certifiés</h4>
+              <p>Tous nos intervenants sont formés, assurés et vérifiés pour votre tranquillité d'esprit.</p>
+            </div>
+          </div>
+          <div class="why-feature">
+            <div class="why-feature__icon">🌱</div>
+            <div>
+              <h4>Produits écologiques</h4>
+              <p>Des produits biodégradables, sûrs pour votre famille et vos animaux de compagnie.</p>
+            </div>
+          </div>
+          <div class="why-feature">
+            <div class="why-feature__icon">⏱️</div>
+            <div>
+              <h4>Ponctualité garantie</h4>
+              <p>Nous respectons vos horaires. En cas d'imprévu, vous êtes prévenus immédiatement.</p>
+            </div>
+          </div>
+          <div class="why-feature">
+            <div class="why-feature__icon">📅</div>
+            <div>
+              <h4>Disponible 7 jours / 7</h4>
+              <p>Weekends et jours fériés inclus — nous nous adaptons à votre agenda.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROCESS / METHOD ===== -->
+  <section class="section cta-band" id="methode">
+    <div class="container">
+      <div class="section-header centered reveal">
+        <p class="section-label" style="color:rgba(200,230,255,.85)">Comment ça marche</p>
+        <h2 class="headline-lg" style="color:var(--white)">Notre méthode en 4 étapes</h2>
+        <p class="section-sub" style="color:rgba(255,255,255,.72);margin:0 auto">Simple, transparent et efficace — de votre premier contact à votre satisfaction totale.</p>
+      </div>
+      <div class="steps-grid">
+        <div class="step-card reveal">
+          <div class="step-card__num">1</div>
+          <h3>Prise de contact</h3>
+          <p>Appelez-nous ou remplissez notre formulaire en ligne. Réponse sous 2h en semaine.</p>
+        </div>
+        <div class="step-card reveal reveal-delay-1">
+          <div class="step-card__num">2</div>
+          <h3>Devis personnalisé</h3>
+          <p>Après évaluation de vos besoins, nous établissons un devis clair et sans surprise.</p>
+        </div>
+        <div class="step-card reveal reveal-delay-2">
+          <div class="step-card__num">3</div>
+          <h3>Intervention</h3>
+          <p>Notre équipe arrive à l'heure convenue avec tout le matériel nécessaire.</p>
+        </div>
+        <div class="step-card reveal reveal-delay-3">
+          <div class="step-card__num">4</div>
+          <h3>Satisfaction garantie</h3>
+          <p>Votre satisfaction est notre priorité. Résultat imparfait ? Nous revenons gratuitement.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIALS ===== -->
+  <section class="section testimonials">
+    <div class="container">
+      <div class="section-header centered reveal">
+        <p class="section-label">Ils nous font confiance</p>
+        <h2 class="headline-lg">Ce que disent nos clients</h2>
+        <p class="section-sub">Plus de 200 familles et entreprises de Saint-Étienne nous font confiance chaque mois.</p>
+      </div>
+      <div class="testimonials__grid">
+        <div class="testi-card reveal">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-text">« Service impeccable ! L'appartement était dans un état catastrophique après les travaux. L'équipe de Cristal42 a tout remis à neuf en une journée. Je recommande vivement ! »</p>
+          <div class="testi-author">
+            <img class="testi-avatar" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80" alt="Sophie M." loading="lazy" />
+            <div>
+              <div class="testi-name">Sophie M.</div>
+              <div class="testi-role">Saint-Étienne, particulier</div>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card reveal reveal-delay-1">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-text">« Ponctualité, professionnalisme et résultats au rendez-vous. Nos bureaux n'ont jamais été aussi propres. Un vrai gain de productivité pour toute l'équipe. »</p>
+          <div class="testi-author">
+            <img class="testi-avatar" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&q=80" alt="Julien R." loading="lazy" />
+            <div>
+              <div class="testi-name">Julien R.</div>
+              <div class="testi-role">Gérant, PME locale</div>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card reveal reveal-delay-2">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-text">« Je gère 4 locations Airbnb et Cristal42 est indispensable dans mon organisation. Rapides, fiables, et mes voyageurs sont toujours épatés par la propreté. »</p>
+          <div class="testi-author">
+            <img class="testi-avatar" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&q=80" alt="Camille B." loading="lazy" />
+            <div>
+              <div class="testi-name">Camille B.</div>
+              <div class="testi-role">Hôte Airbnb</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROMISE ===== -->
+  <section class="section promise" id="promesse">
+    <div class="container">
+      <h2 class="headline-lg promise__title reveal">La Promesse Cristal42</h2>
+      <div class="promise__grid">
+        <div class="promise-item reveal">
+          <div class="promise-item__icon-wrap">✓</div>
+          <h3 class="headline-md">Confiance</h3>
+          <p>Personnel rigoureusement sélectionné, assuré et régulièrement formé.</p>
+        </div>
+        <div class="promise-item reveal reveal-delay-1">
+          <div class="promise-item__icon-wrap">🌿</div>
+          <h3 class="headline-md">Écologie</h3>
+          <p>Produits biodégradables et méthodes respectueuses de l'environnement.</p>
+        </div>
+        <div class="promise-item reveal reveal-delay-2">
+          <div class="promise-item__icon-wrap">✦</div>
+          <h3 class="headline-md">Qualité</h3>
+          <p>Un standard d'excellence sans compromis, à chaque intervention.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <div class="footer__logo">
+            <div class="nav__logo-mark">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2l1.5 8.5L22 12l-8.5 1.5L12 22l-1.5-8.5L2 12l8.5-1.5z"/>
+              </svg>
+            </div>
+            <span class="footer__logo-name">Cristal42</span>
+          </div>
+          <p>Service de nettoyage professionnel à Saint-Étienne. Résidentiel, commercial, Airbnb — nous prenons soin de chaque espace.</p>
+        </div>
+        <div class="footer__col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="services.html#residentiel">Nettoyage résidentiel</a></li>
+            <li><a href="services.html#commercial">Bureaux &amp; commerces</a></li>
+            <li><a href="services.html#airbnb">Airbnb</a></li>
+            <li><a href="services.html#vehicules">Véhicules</a></li>
+            <li><a href="services.html#chantier">Fin de chantier</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="tel:+33753387168">07 53 38 71 68</a></li>
+            <li><a href="mailto:contact@cristal42.fr">contact@cristal42.fr</a></li>
+            <li><a href="reservation.html">Devis gratuit</a></li>
+            <li><a href="#">Mentions légales</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copy">© 2026 Cristal 42 — Nettoyage professionnel à Saint-Étienne</p>
+        <p class="footer__copy">Saint-Étienne &amp; Loire (42)</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating CTA -->
+  <a href="reservation.html" class="floating-cta">📞 Devis gratuit</a>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

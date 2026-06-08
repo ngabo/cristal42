@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nos Services — Cristal42</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/services.css" />
+</head>
+<body>
+
+  <!-- ===== NAV ===== -->
+  <nav class="nav" id="navbar">
+    <div class="container nav__inner">
+      <a href="index.html" class="nav__logo">
+        <div class="nav__logo-mark">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2l1.5 8.5L22 12l-8.5 1.5L12 22l-1.5-8.5L2 12l8.5-1.5z"/>
+          </svg>
+        </div>
+        <span class="nav__logo-name">Cristal<span style="color:var(--gold)">42</span></span>
+      </a>
+      <ul class="nav__links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="services.html" class="active">Services</a></li>
+        <li><a href="index.html#pourquoi">Pourquoi nous</a></li>
+        <li><a href="index.html#methode">Notre méthode</a></li>
+        <li><a href="reservation.html">Contact</a></li>
+      </ul>
+      <div style="display:flex;align-items:center;gap:12px">
+        <span class="nav__phone">☎ 07 53 38 71 68</span>
+        <a href="reservation.html" class="btn btn-primary nav__cta">Devis gratuit</a>
+      </div>
+      <button class="nav__burger" id="burger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div class="mobile-nav" id="mobileNav">
+    <a href="index.html">Accueil</a>
+    <a href="services.html">Services</a>
+    <a href="index.html#pourquoi">Pourquoi nous</a>
+    <a href="index.html#methode">Notre méthode</a>
+    <a href="reservation.html">Contact</a>
+    <a href="reservation.html" class="btn btn-primary" style="text-align:center;border-radius:8px">Devis gratuit</a>
+  </div>
+
+  <!-- ===== PAGE HERO ===== -->
+  <section class="page-hero">
+    <div class="page-hero__bg"></div>
+    <div class="container page-hero__inner">
+      <p class="chip">L'excellence du détail</p>
+      <h1 class="headline-lg page-hero__title">L'Art de la Propreté<br>Redéfini.</h1>
+      <p class="body-lg page-hero__desc">
+        Chez Cristal42, nous transformons le nettoyage en une expérience de sérénité. Découvrez nos services sur-mesure pour chaque aspect de votre vie.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== RÉSIDENTIEL ===== -->
+  <section class="section svc-block" id="residentiel">
+    <div class="container svc-block__inner">
+      <div class="svc-block__content reveal">
+        <div class="svc-block__meta">
+          <span>🏠</span>
+          <h2 class="headline-lg">Appartements<br>&amp; Villas</h2>
+        </div>
+        <p class="body-lg svc-block__desc">
+          Un entretien méticuleux pour vos espaces de vie, respectant l'intimité et les matériaux nobles de votre intérieur.
+        </p>
+        <ul class="svc-list">
+          <li><span class="sparkle sparkle--sm"></span> Nettoyage en profondeur des sols (marbre, bois, béton)</li>
+          <li><span class="sparkle sparkle--sm"></span> Désinfection écologique des sanitaires</li>
+          <li><span class="sparkle sparkle--sm"></span> Polissage des surfaces vitrées et miroirs</li>
+          <li><span class="sparkle sparkle--sm"></span> Dépoussiérage architectural (corniches, plinthes)</li>
+        </ul>
+        <a href="reservation.html?service=residentiel" class="btn btn-primary">Réserver ce service</a>
+      </div>
+      <div class="svc-block__image reveal reveal-delay-1">
+        <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=900&q=85" alt="Nettoyage résidentiel haut de gamme" loading="lazy" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== AIRBNB ===== -->
+  <section class="section svc-block svc-block--dark" id="airbnb">
+    <div class="container svc-block__inner">
+      <div class="svc-block__image reveal">
+        <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=900&q=85" alt="Logement Airbnb prêt à accueillir" loading="lazy" />
+      </div>
+      <div class="svc-block__content reveal reveal-delay-1">
+        <div class="svc-block__meta">
+          <span>✦</span>
+          <h2 class="headline-lg" style="color:var(--gold-light)">Service Airbnb</h2>
+        </div>
+        <p class="body-lg svc-block__desc">
+          Optimisez vos évaluations avec notre service de nettoyage automatisé à chaque rotation de voyageur. Vos hôtes méritent le meilleur.
+        </p>
+        <ul class="svc-list svc-list--light">
+          <li><span class="sparkle sparkle--sm" style="background:var(--gold)"></span> Blanchisserie complète et literie refaite</li>
+          <li><span class="sparkle sparkle--sm" style="background:var(--gold)"></span> Réapprovisionnement des essentiels</li>
+          <li><span class="sparkle sparkle--sm" style="background:var(--gold)"></span> Check-list photo avant chaque départ</li>
+          <li><span class="sparkle sparkle--sm" style="background:var(--gold)"></span> Coordination avec les plateformes de réservation</li>
+        </ul>
+        <a href="reservation.html?service=airbnb" class="btn btn-primary">Planifier ce service</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== COMMERCIAL ===== -->
+  <section class="section svc-block" id="commercial">
+    <div class="container svc-block__inner">
+      <div class="svc-block__content reveal">
+        <div class="svc-block__meta">
+          <span>🏢</span>
+          <h2 class="headline-lg">Espaces Commerciaux</h2>
+        </div>
+        <p class="body-lg svc-block__desc">
+          Bureaux, boutiques et showrooms. Maintenez une image de marque forte grâce à un environnement de travail sain et ordonné.
+        </p>
+        <ul class="svc-list">
+          <li><span class="sparkle sparkle--sm"></span> Entretien régulier en dehors des heures de bureau</li>
+          <li><span class="sparkle sparkle--sm"></span> Nettoyage de surfaces techniques et vitrines</li>
+          <li><span class="sparkle sparkle--sm"></span> Gestion des déchets et tri sélectif</li>
+          <li><span class="sparkle sparkle--sm"></span> Rapports de prestation mensuels</li>
+        </ul>
+        <a href="reservation.html?service=commercial" class="btn btn-outline">Devenir partenaire</a>
+      </div>
+      <div class="svc-block__image reveal reveal-delay-1">
+        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=900&q=85" alt="Bureaux propres et modernes" loading="lazy" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== VÉHICULES ===== -->
+  <section class="section svc-block svc-block--tinted" id="vehicules">
+    <div class="container svc-block__inner">
+      <div class="svc-block__image reveal">
+        <img src="https://images.unsplash.com/photo-1552830983-a9614e4f8c5e?w=900&q=85" alt="Nettoyage de véhicule professionnel" loading="lazy" />
+      </div>
+      <div class="svc-block__content reveal reveal-delay-1">
+        <div class="svc-block__meta">
+          <span>🚗</span>
+          <h2 class="headline-lg">Detailing Véhicules</h2>
+        </div>
+        <p class="body-lg svc-block__desc">
+          Redonnez à votre véhicule son éclat d'origine avec notre service de nettoyage automobile à domicile ou au bureau.
+        </p>
+        <div class="svc-detail-grid">
+          <div>
+            <p class="label-lg" style="color:var(--primary);margin-bottom:10px">Intérieur</p>
+            <ul class="svc-list">
+              <li><span class="sparkle sparkle--sm"></span> Aspiration complète</li>
+              <li><span class="sparkle sparkle--sm"></span> Shampoing des sièges</li>
+              <li><span class="sparkle sparkle--sm"></span> Polissage des plastiques</li>
+            </ul>
+          </div>
+          <div>
+            <p class="label-lg" style="color:var(--primary);margin-bottom:10px">Extérieur</p>
+            <ul class="svc-list">
+              <li><span class="sparkle sparkle--sm"></span> Lavage sans rayure</li>
+              <li><span class="sparkle sparkle--sm"></span> Cire de protection</li>
+              <li><span class="sparkle sparkle--sm"></span> Traitement des jantes</li>
+            </ul>
+          </div>
+        </div>
+        <a href="reservation.html?service=vehicule" class="btn btn-outline">Réserver ce service</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FIN DE CHANTIER ===== -->
+  <section class="section svc-chantier" id="chantier">
+    <div class="container">
+      <div class="svc-chantier__inner reveal">
+        <div class="svc-chantier__header">
+          <span>🔧</span>
+          <h2 class="headline-lg" style="color:var(--white)">Fin de Chantier<br>&amp; Rénovation</h2>
+        </div>
+        <p class="body-lg svc-chantier__desc">
+          Le passage crucial entre les travaux et l'occupation. Nous effaçons chaque trace de chantier pour laisser place à la perfection.
+        </p>
+        <div class="svc-chantier__cols">
+          <div>
+            <p class="label-lg" style="color:var(--gold);margin-bottom:12px">Inclus :</p>
+            <ul class="svc-list">
+              <li><span class="sparkle sparkle--sm" style="background:var(--gold)"></span> Retrait des résidus de crépi et peinture</li>
+              <li><span class="sparkle sparkle--sm" style="background:var(--gold)"></span> Nettoyage initial des sols de finition</li>
+              <li><span class="sparkle sparkle--sm" style="background:var(--gold)"></span> Dépoussiérage complet des surfaces</li>
+            </ul>
+          </div>
+          <div>
+            <p class="label-lg" style="color:var(--gold);margin-bottom:12px">Focus :</p>
+            <ul class="svc-list">
+              <li><span class="sparkle sparkle--sm" style="background:var(--gold)"></span> Évaluation des micro-poussières</li>
+              <li><span class="sparkle sparkle--sm" style="background:var(--gold)"></span> Polissage final des équipements</li>
+              <li><span class="sparkle sparkle--sm" style="background:var(--gold)"></span> Nettoyage des vitrages post-travaux</li>
+            </ul>
+          </div>
+        </div>
+        <a href="reservation.html?service=chantier" class="btn btn-primary">Demander un devis chantier</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROMESSE ===== -->
+  <section class="section promise-strip">
+    <div class="container">
+      <h2 class="headline-lg promise-strip__title reveal">La Promesse Cristal42</h2>
+      <div class="promise-strip__grid">
+        <div class="promise-strip__item reveal">
+          <div class="promise-strip__icon">✓</div>
+          <h3 class="headline-md">Confiance</h3>
+          <p class="body-md">Personnel rigoureusement sélectionné et assuré.</p>
+        </div>
+        <div class="promise-strip__item reveal reveal-delay-1">
+          <div class="promise-strip__icon">🌿</div>
+          <h3 class="headline-md">Écologie</h3>
+          <p class="body-md">Produits biodégradables et respectueux de l'environnement.</p>
+        </div>
+        <div class="promise-strip__item reveal reveal-delay-2">
+          <div class="promise-strip__icon">✦</div>
+          <h3 class="headline-md">Qualité</h3>
+          <p class="body-md">Un standard d'excellence sans compromis, à chaque visite.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <div class="footer__logo">
+            <div class="nav__logo-mark">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2l1.5 8.5L22 12l-8.5 1.5L12 22l-1.5-8.5L2 12l8.5-1.5z"/>
+              </svg>
+            </div>
+            <span class="footer__logo-name">Cristal42</span>
+          </div>
+          <p>Service de nettoyage professionnel à Saint-Étienne. Résidentiel, commercial, Airbnb — nous prenons soin de chaque espace.</p>
+        </div>
+        <div class="footer__col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#residentiel">Nettoyage résidentiel</a></li>
+            <li><a href="#commercial">Bureaux &amp; commerces</a></li>
+            <li><a href="#airbnb">Airbnb</a></li>
+            <li><a href="#vehicules">Véhicules</a></li>
+            <li><a href="#chantier">Fin de chantier</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="tel:+33753387168">07 53 38 71 68</a></li>
+            <li><a href="mailto:contact@cristal42.fr">contact@cristal42.fr</a></li>
+            <li><a href="reservation.html">Devis gratuit</a></li>
+            <li><a href="#">Mentions légales</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copy">© 2026 Cristal 42 — Nettoyage professionnel à Saint-Étienne</p>
+        <p class="footer__copy">Saint-Étienne &amp; Loire (42)</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

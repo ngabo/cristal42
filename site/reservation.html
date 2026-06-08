@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Demander un Devis — Cristal42</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/reservation.css" />
+</head>
+<body>
+
+  <!-- ===== NAV ===== -->
+  <nav class="nav" id="navbar">
+    <div class="container nav__inner">
+      <a href="index.html" class="nav__logo">
+        <div class="nav__logo-mark">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2l1.5 8.5L22 12l-8.5 1.5L12 22l-1.5-8.5L2 12l8.5-1.5z"/>
+          </svg>
+        </div>
+        <span class="nav__logo-name">Cristal<span style="color:var(--gold)">42</span></span>
+      </a>
+      <ul class="nav__links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="index.html#pourquoi">Pourquoi nous</a></li>
+        <li><a href="index.html#methode">Notre méthode</a></li>
+        <li><a href="reservation.html" class="active">Contact</a></li>
+      </ul>
+      <div style="display:flex;align-items:center;gap:12px">
+        <span class="nav__phone">☎ 07 53 38 71 68</span>
+        <a href="reservation.html" class="btn btn-primary nav__cta">Devis gratuit</a>
+      </div>
+      <button class="nav__burger" id="burger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div class="mobile-nav" id="mobileNav">
+    <a href="index.html">Accueil</a>
+    <a href="services.html">Services</a>
+    <a href="index.html#pourquoi">Pourquoi nous</a>
+    <a href="index.html#methode">Notre méthode</a>
+    <a href="reservation.html">Contact</a>
+    <a href="reservation.html" class="btn btn-primary" style="text-align:center;border-radius:8px">Devis gratuit</a>
+  </div>
+
+  <!-- ===== PAGE LAYOUT ===== -->
+  <main class="reservation-page">
+    <div class="container reservation-page__inner">
+
+      <!-- LEFT SIDEBAR -->
+      <aside class="res-sidebar">
+        <h1 class="headline-lg res-sidebar__title">
+          L'art de la propreté<br>à votre portée
+        </h1>
+        <p class="body-md res-sidebar__desc">
+          Que ce soit pour votre résidence privée ou vos locaux commerciaux, Cristal42 apporte une précision artisanale à chaque détail. Remplissez le formulaire pour une estimation personnalisée.
+        </p>
+
+        <div class="res-info-block">
+          <div class="res-info-block__icon">📍</div>
+          <div>
+            <p class="label-lg res-info-block__label">Zone d'intervention</p>
+            <p class="body-md">Saint-Étienne &amp; alentours<br>Loire — Département 42</p>
+          </div>
+        </div>
+
+        <div class="res-info-block">
+          <div class="res-info-block__icon">🕐</div>
+          <div>
+            <p class="label-lg res-info-block__label">Horaires de service</p>
+            <p class="body-md">
+              Lun – Ven &nbsp; 08h00 – 19h00<br>
+              Samedi &nbsp;&nbsp;&nbsp;&nbsp; 09h00 – 17h00<br>
+              <span style="color:var(--secondary)">Dimanche sur demande</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="res-contact-direct">
+          <p class="label-lg res-contact-direct__label">Contact direct</p>
+          <p class="res-contact-direct__phone">+33 7 53 38 71 68</p>
+          <p class="body-md" style="color:var(--on-surface-variant)">contact@cristal42.fr</p>
+        </div>
+
+        <img
+          src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=600&q=80"
+          alt="Équipe Cristal42"
+          style="width:100%;height:200px;object-fit:cover;border-radius:var(--radius-lg);margin-top:2rem;box-shadow:var(--shadow);"
+          loading="lazy"
+        />
+        <img
+          src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=600&q=80"
+          alt="Intérieur impeccable"
+          style="width:100%;height:160px;object-fit:cover;border-radius:var(--radius-lg);margin-top:1rem;box-shadow:var(--shadow-sm);"
+          loading="lazy"
+        />
+      </aside>
+
+      <!-- FORM -->
+      <section class="res-form-wrap">
+        <form class="res-form" id="devisForm" novalidate>
+
+          <div class="res-form__row">
+            <div class="form-field">
+              <label class="form-field__label" for="nom">Nom complet</label>
+              <input class="form-field__input" type="text" id="nom" name="nom"
+                     placeholder="Jean Dupont" required />
+            </div>
+            <div class="form-field">
+              <label class="form-field__label" for="email">E-mail</label>
+              <input class="form-field__input" type="email" id="email" name="email"
+                     placeholder="jean@exemple.fr" required />
+            </div>
+          </div>
+
+          <div class="res-form__row">
+            <div class="form-field">
+              <label class="form-field__label" for="service">Service souhaité</label>
+              <select class="form-field__input form-field__select" id="service" name="service" required>
+                <option value="">Choisissez une prestation…</option>
+                <option value="residentiel">Entretien Résidentiel</option>
+                <option value="airbnb">Service Airbnb</option>
+                <option value="commercial">Espaces Commerciaux</option>
+                <option value="vehicule">Detailing Véhicules</option>
+                <option value="chantier">Fin de Chantier</option>
+                <option value="jardins">Entretien Jardins</option>
+                <option value="demenagement">Post-déménagement</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label class="form-field__label" for="telephone">Téléphone</label>
+              <input class="form-field__input" type="tel" id="telephone" name="telephone"
+                     placeholder="+33 6 00 00 00 00" />
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label class="form-field__label" for="details">Détails de la demande</label>
+            <textarea class="form-field__input form-field__textarea" id="details" name="details"
+                      placeholder="Décrivez votre besoin : surface, fréquence souhaitée, particularités…" rows="5"></textarea>
+          </div>
+
+          <div class="res-form__submit-row">
+            <button type="submit" class="btn btn-primary res-form__submit">
+              Envoyer ma demande &nbsp;→
+            </button>
+            <p class="res-form__note">Réponse garantie sous 24h ouvrées.</p>
+          </div>
+
+          <!-- Success message -->
+          <div class="res-form__success" id="formSuccess" hidden>
+            <span class="sparkle" style="width:20px;height:20px"></span>
+            <p>Merci ! Votre demande a bien été envoyée. Nous vous contactons très prochainement.</p>
+          </div>
+
+        </form>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <div class="footer__logo">
+            <div class="nav__logo-mark">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2l1.5 8.5L22 12l-8.5 1.5L12 22l-1.5-8.5L2 12l8.5-1.5z"/>
+              </svg>
+            </div>
+            <span class="footer__logo-name">Cristal42</span>
+          </div>
+          <p>Service de nettoyage professionnel à Saint-Étienne. Résidentiel, commercial, Airbnb — nous prenons soin de chaque espace.</p>
+        </div>
+        <div class="footer__col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="services.html#residentiel">Nettoyage résidentiel</a></li>
+            <li><a href="services.html#commercial">Bureaux &amp; commerces</a></li>
+            <li><a href="services.html#airbnb">Airbnb</a></li>
+            <li><a href="services.html#vehicules">Véhicules</a></li>
+            <li><a href="services.html#chantier">Fin de chantier</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="tel:+33753387168">07 53 38 71 68</a></li>
+            <li><a href="mailto:contact@cristal42.fr">contact@cristal42.fr</a></li>
+            <li><a href="reservation.html">Devis gratuit</a></li>
+            <li><a href="#">Mentions légales</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copy">© 2026 Cristal 42 — Nettoyage professionnel à Saint-Étienne</p>
+        <p class="footer__copy">Saint-Étienne &amp; Loire (42)</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/reservation.js"></script>
+</body>
+</html>
