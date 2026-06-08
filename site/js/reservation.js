@@ -13,44 +13,54 @@ document.addEventListener('DOMContentLoaded', () => {
   const submit  = form ? form.querySelector('.res-form__submit') : null;
   if (!form) return;
 
-  // Always hide success on load
+  // Always hidden on page load
   success.hidden = true;
 
-  form.addEventListener('submit', async (e) => {
+  form.addEventListener('submit', (e) => {
     e.preventDefault();
     if (!form.checkValidity()) { form.reportValidity(); return; }
 
-    // Loading state
-    const origText   = submit.innerHTML;
-    submit.disabled  = true;
-    submit.innerHTML = 'Envoi en cours…';
+    // Collect values
+    const nom      = document.getElementById('nom').value.trim();
+    const email    = document.getElementById('email').value.trim();
+    const tel      = document.getElementById('telephone').value.trim();
+    const svc      = document.getElementById('service');
+    const svcLabel = svc.options[svc.selectedIndex].text;
+    const details  = document.getElementById('details').value.trim();
 
-    const data = new FormData(form);
+    // Build a clean email body
+    const body = [
+      '=== Nouvelle demande de devis Cristal42 ===',
+      '',
+      'Nom complet   : ' + nom,
+      'E-mail        : ' + email,
+      'Téléphone     : ' + (tel || 'non renseigné'),
+      'Service       : ' + svcLabel,
+      '',
+      'Détails :',
+      details || '(aucun détail)',
+      '',
+      '---',
+      'Envoyé depuis le site Cristal42'
+    ].join('\n');
 
-    try {
-      const res  = await fetch('https://api.web3forms.com/submit', {
-        method : 'POST',
-        body   : data
-      });
-      const json = await res.json();
+    const subject = encodeURIComponent('🧹 Nouveau devis Cristal42 – ' + svcLabel);
+    const bodyEnc = encodeURIComponent(body);
 
-      if (json.success) {
-        // Show success message, clear fields
-        success.hidden = false;
-        success.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-        form.querySelectorAll('input:not([type=hidden]), select, textarea')
-            .forEach(el => el.value = '');
-        submit.innerHTML = '✓ Envoyé !';
-        submit.style.background = '#16a34a';
-      } else {
-        throw new Error(json.message || 'Erreur inconnue');
-      }
-    } catch (err) {
-      console.error('Erreur envoi :', err);
-      submit.disabled  = false;
-      submit.innerHTML = origText;
-      alert('Une erreur est survenue. Veuillez réessayer ou nous appeler au 07 53 38 71 68.');
-    }
+    // Open native email client pre-filled
+    window.location.href =
+      'mailto:ngabochampion@gmail.com?subject=' + subject + '&body=' + bodyEnc;
+
+    // Show success message & reset form
+    setTimeout(() => {
+      success.hidden = false;
+      success.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      form.querySelectorAll('input:not([type=hidden]), select, textarea')
+          .forEach(el => el.value = '');
+      submit.innerHTML  = '✓ Demande envoyée !';
+      submit.style.background = '#16a34a';
+      submit.disabled = true;
+    }, 400);
   });
 
 });
