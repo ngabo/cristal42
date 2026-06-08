@@ -201,26 +201,17 @@
 }
 .why-us__images {
   position: relative;
-  height: 540px;
-}
-.why-us__img-main {
-  position: absolute; left: 0; top: 0;
-  width: 78%; height: 80%;
-  object-fit: cover;
   border-radius: var(--radius-xl);
+  overflow: hidden;
   box-shadow: var(--shadow-lg);
+  height: 480px;
 }
-.why-us__img-accent {
-  position: absolute; right: 0; bottom: 0;
-  width: 52%; height: 50%;
+.why-us__images img {
+  width: 100%; height: 100%;
   object-fit: cover;
-  border-radius: var(--radius-xl);
-  box-shadow: var(--shadow);
-  border: 6px solid var(--surface);
 }
 .why-us__badge {
-  position: absolute; left: 34%; top: 44%;
-  transform: translate(-50%, -50%);
+  position: absolute; bottom: 2rem; left: 2rem;
   background: var(--gold);
   color: var(--primary-dark);
   border-radius: var(--radius-lg);
