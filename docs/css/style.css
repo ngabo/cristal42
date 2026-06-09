@@ -37,7 +37,7 @@
 
   --container: 1200px;
   --gutter:    24px;
-  --section-gap: 96px;
+  --section-gap: 56px;
 
   --shadow-sm: 0 2px 8px rgba(0,0,0,.06);
   --shadow:    0 8px 32px rgba(0,0,0,.10);
@@ -288,13 +288,13 @@ button { cursor: pointer; font-family: var(--font-sans); border: none; backgroun
 .footer {
   background: var(--primary-dark);
   color: rgba(255,255,255,.7);
-  padding: 4rem 0 2rem;
+  padding: 2.5rem 0 1.5rem;
 }
 .footer__grid {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
   gap: 3rem;
-  margin-bottom: 3rem;
+  margin-bottom: 1.75rem;
 }
 .footer__brand p {
   font-size: 0.875rem; line-height: 1.7;
@@ -350,7 +350,7 @@ button { cursor: pointer; font-family: var(--font-sans); border: none; backgroun
   .footer__brand { grid-column: 1 / -1; }
 }
 @media (max-width: 600px) {
-  :root { --section-gap: 64px; }
+  :root { --section-gap: 40px; }
   .footer__grid { grid-template-columns: 1fr; }
   .footer__bottom { flex-direction: column; text-align: center; }
 }
